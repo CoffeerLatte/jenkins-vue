@@ -1,6 +1,23 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAkPjTZGmnUDfdyp8ie_lQiDsFy23yVaC0",
+  authDomain: "jenkins-vue-7680f.firebaseapp.com",
+  projectId: "jenkins-vue-7680f",
+  storageBucket: "jenkins-vue-7680f.appspot.com",
+  messagingSenderId: "166064333460",
+  appId: "1:166064333460:web:232fe33d7d57587f6f0a81",
+  measurementId: "G-3EQH67WGNB"
+};
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 </script>
 
 <template>
